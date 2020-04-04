@@ -54,7 +54,7 @@ CREATE TABLE dept_manager(
 SELECT * FROM employees;
 SELECT * FROM departments;
 SELECT * FROM dep_emp;
-SELECT * FROM title;
+SELECT * FROM titles;
 SELECT * FROM salaries;
 SELECT * FROM dept_manager;
 
@@ -66,8 +66,8 @@ e.last_name,
 e.first_name,
 e.gender,
 s.salaries
-FROM employees e 
-JOIN salaries s
+FROM employees AS e 
+JOIN salaries AS s
 ON e.emp_no=s.emp_no;
 
 -- List employees who were hired in 1986.
@@ -78,19 +78,27 @@ WHERE hire_date>'1986-01-01' AND hire_date<'1986-12-30';
 -- List the manager of each department with the following information: department number, department name, 
 -- the manager's employee number, last name, first name, and start and end employment dates.
 
+
 SELECT 
 d.dept_no, -- dept_manager
-D.dept_name, -- departments
+f.dept_name, -- departments
 d.emp_no,
 e.last_name, -- employees
-e.fist_name,
+e.first_name,
 d.from_date,
 d.to_date
-FROM
-
+FROM 
+departments AS f, 
+dept_manager AS d, 
+employees AS E
+WHERE f.dept_no=d.dept_no
+AND d.emp_no=e.emp_no;
 
 
 -- List the department of each employee with the following information: employee number, last name, first name, and department name.
+
+SELECT
+
 
 -- List all employees whose first name is "Hercules" and last names begin with "B."
 
@@ -101,19 +109,5 @@ FROM
 -- In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 
 
-ALTER TABLE employees
-ADD PRIMARY KEY (emp_no);
-
-ALTER TABLE departments
-ADD PRIMARY KEY (dept_no);
-
-ALTER TABLE dep_emp
-ADD FOREIGN KEY (dept_no) REFERENCES departments(dept_no);
-
-SELECT * 
-FROM employees 
-WHERE hire_date>'1986-01-01' AND hire_date<'1986-12-30';
 
 
-
-SELECT * departments.dep_no,
