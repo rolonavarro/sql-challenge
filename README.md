@@ -1,6 +1,8 @@
 # SQL-challenge
 
 * It this repository I analyzed Pewlett Hackard employee data from 1980s to 1990 by using SQL. I made a connection with PostgreSQL and  jupyter notbook by using sqlalchemy library. 
+* Under the EmployeeSQL folder you can find the data I used for the research, and also you can find a jupyter notebook with 
+all my work.
 
 ### Data Analysis
 
