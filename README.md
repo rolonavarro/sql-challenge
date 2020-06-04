@@ -1,8 +1,6 @@
 # SQL-challenge
 
-Employee Database: A Mystery in Two Parts
-
-It this repository I analyzed Pewlett Hackard employee data from 1980s to 1990 by using SQL. 
+* It this repository I analyzed Pewlett Hackard employee data from 1980s to 1990 by using SQL. I made a connection with PostgreSQL and  jupyter notbook by using sqlalchemy library. 
 
 ### Data Analysis
 
@@ -21,5 +19,3 @@ It this repository I analyzed Pewlett Hackard employee data from 1980s to 1990 b
 - List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
 - In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
-
-I also learned how to use SQLAlchemy to connect to pgAdmin4
