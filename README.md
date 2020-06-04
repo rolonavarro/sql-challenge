@@ -1,10 +1,10 @@
-# sql-challenge
+# SQL-challenge
 
 Employee Database: A Mystery in Two Parts
 
 It this repository I analyzed Pewlett Hackard employee data from 1980s to 1990 by using SQL. 
 
-Data Analysis
+### Data Analysis
 
 - List the following details of each employee: employee number, last name, first name, gender, and salary.
 
